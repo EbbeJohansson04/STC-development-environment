@@ -1,0 +1,29 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "scss": "sass --watch css/scss/style.scss:css/style.css",
+    "watch-scss": "sass --watch assets/scss/style.scss dist/css/style.css",
+    "livereload": "livereload",
+    "css-minify": "css-minify",
+    "sass": "compile-sass assets/scss/style.scss dist/css/style.css --watch"
+
+
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "css-minify": "^2.0.2",
+    "express": "^4.21.1",
+    "jslint": "^0.12.1",
+    "livereload": "^0.9.3",
+    "nodejs": "^0.0.0",
+    "sass": "^1.80.6"
+  },
+  "devDependencies": {
+    "compile-sass": "^2.0.0"
+  }
+}
