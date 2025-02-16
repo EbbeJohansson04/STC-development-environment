@@ -4,13 +4,19 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "scss": "sass --watch css/scss/style.scss:css/style.css",
-    "watch-scss": "sass --watch assets/scss/style.scss dist/css/style.css",
-    "livereload": "livereload",
-    "css-minify": "css-minify",
-    "sass": "compile-sass assets/scss/style.scss dist/css/style.css --watch"
-
-
+    "scss": "sass css/scss/style.scss:css/style.css",
+    "watch-scss": "sass css/scss/style.scss:css/style.css --watch",
+    "livereload": "livereload --port 5500",
+    "css-minify": "css-minify -f css/style.css",
+    "lint-css": "stylelint css/style.css",
+    "lint-css-fix": "stylelint css/style.css --fix"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "alpha-value-notation": "percentage",
+      "selector-class-pattern": null
+    }
   },
   "author": "",
   "license": "ISC",
@@ -20,10 +26,12 @@
     "express": "^4.21.1",
     "jslint": "^0.12.1",
     "livereload": "^0.9.3",
-    "nodejs": "^0.0.0",
-    "sass": "^1.80.6"
+    "nodejs": "^0.0.0"
   },
   "devDependencies": {
-    "compile-sass": "^2.0.0"
+    "compile-sass": "^2.0.0",
+    "sass": "^1.85.0",
+    "stylelint": "^16.14.1",
+    "stylelint-config-standard": "^37.0.0"
   }
 }
