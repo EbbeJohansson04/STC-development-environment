@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "cypress": "npx cypress open",
     "scss": "sass css/scss/style.scss:css/style.css",
     "watch-scss": "sass css/scss/style.scss:css/style.css --watch",
     "livereload": "livereload --port 5500",
@@ -22,6 +22,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axe-core": "^4.10.3",
     "css-minify": "^2.0.2",
     "express": "^4.21.1",
     "jslint": "^0.12.1",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "compile-sass": "^2.0.0",
+    "cypress": "^14.4.0",
     "sass": "^1.85.0",
     "stylelint": "^16.14.1",
     "stylelint-config-standard": "^37.0.0"
